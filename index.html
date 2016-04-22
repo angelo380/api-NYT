@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="nytApp">
+  <head>
+    <script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/controller.js"></script>
+  <title>New York Times</title>
+  </head>
+  <body ng-controller="newsController">
+    <div>
+    <ul>
+      <li ng-repeat="item in items">
+      	<div class="imageBox"><img src="{{Prefix + item.multimedia[0].url}}" alt=""></div>
+      	<h2>{{item.headline.main}}</h2>
+      	<p>{{item.abstract}}</p>
+        <a href="{{item.web_url}}">Ver Noticia</a>
+      </li>
+    </ul>	
+    </div>
+  </body>
+</html>
